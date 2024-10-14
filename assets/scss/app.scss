@@ -1,0 +1,38 @@
+/*-----------------------------------------
+# Utils
+-----------------------------------------*/
+@import "utils/fonts";
+@import "utils/variables";
+@import "utils/placeholders";
+@import "utils/mixins";
+@import "utils/functions";
+@import "utils/animations";
+@import "utils/visually-hidden";
+
+/*-----------------------------------------
+# Base
+-----------------------------------------*/
+@import "base/common";
+@import "base/typography";
+@import "base/container";
+
+/*-----------------------------------------
+# Components
+-----------------------------------------*/
+@import "components/logo";
+@import "components/buttons";
+@import "components/contacts-icons";
+@import "components/mobile-menu";
+@import "components/modal-window";
+
+/*-----------------------------------------
+# Layouts
+  -----------------------------------------*/
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "layouts/home";
+@import "layouts/hero";
+@import "layouts/about";
+@import "layouts/advantages";
+@import "layouts/reviews";

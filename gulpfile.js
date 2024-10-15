@@ -3,7 +3,9 @@
 const jsWatch = ["./assets/js/app.js"],
   jsFiles = ["./assets/js/app.js", "./assets/js/*.js", "!./assets/js/*.min.js"],
   cssWatch = ["./assets/scss/*.scss", "./assets/scss/**/*.scss"],
-  cssFiles = ["./assets/scss/app.scss"];
+  cssFiles = ["./assets/scss/app.scss"],
+  svgWatch = ["./assets/svg/*.svg"],
+  svgFiles = ["./assets/svg/*.svg"];
 
 // Initialize modules
 // Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
@@ -25,11 +27,11 @@ import plumber from "gulp-plumber";
 import concat from "gulp-concat";
 import merge from "merge2";
 
-// SVG спрайт конфігурація
+// SVG sprite config
 const svgConfig = {
   mode: {
     symbol: {
-      sprite: "sprite.svg", // Назва спрайта
+      sprite: "sprite.svg", // Name of sprite
     },
   },
 };
@@ -83,21 +85,21 @@ function jsTask() {
 
 // SVG Sprite Task
 function svgSpriteTask() {
-  return src("./assets/svg/*.svg") // Шлях до SVG файлів
+  return src(svgFiles, { base: "./" }) // Path to SVG files
     .pipe(svgSprite(svgConfig))
-    .pipe(dest("./assets/images/sprites")); // Шлях для збереження спрайта
+    .pipe(dest("./assets/images/sprites")); // Path for saving sprite
 }
 
-// Watch task: watch SCSS and JS files for changes
-// If any change, run scss and js tasks simultaneously
+// Watch task: watch SCSS, JS and SVG files for changes
+// If any change, run scss, js and svg tasks simultaneously
 function watchTask() {
   watch(
-    [...cssWatch, ...jsWatch, "./assets/svg/*.svg"],
+    [...cssWatch, ...jsWatch, ...svgWatch],
     series(parallel(scssTask, jsTask, svgSpriteTask))
   );
 }
 
 // Export the default Gulp task, so it can be run
-// Runs the scss and js tasks simultaneously then watch task
+// Runs the scss, js and svg tasks simultaneously then watch task
 const _default = series(parallel(scssTask, jsTask, svgSpriteTask), watchTask);
 export { _default as default };

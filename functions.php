@@ -14,3 +14,6 @@ require get_template_directory() . '/inc/_nav-menus.php';
 
 // ACF options page
 require get_template_directory() . '/inc/_acf-options-page.php';
+
+// SVG allow
+require get_template_directory() . '/inc/_svg-support.php';

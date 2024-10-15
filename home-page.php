@@ -20,6 +20,8 @@ get_header(); ?>
 
     get_template_part('template-parts/home-page', 'reviews');
 
+    get_template_part('template-parts/home-page', 'path');
+
     ?>
 </main>
 

@@ -6,7 +6,10 @@ if (!defined('ABSPATH')) exit; ?>
 
 <div class="menu-container js-menu-container" aria-hidden="true">
     <button type="button" class="menu-button js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Close mobile menu">
-        <img class="menu-button__icon" src="<?php echo get_template_directory_uri() . '/assets/svg/cross.svg'; ?>" alt="Cross." />
+        <svg class="menu-button__icon">
+            <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--cross"'; ?>">
+            </use>
+        </svg>
     </button>
     <?php
     wp_nav_menu([

@@ -1,5 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section class="about">
+<section id="about" class="about">
+    ABOUT
 </section>

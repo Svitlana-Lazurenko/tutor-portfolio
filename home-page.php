@@ -10,7 +10,6 @@ Template Post Type: page
 get_header(); ?>
 
 <main>
-
     <?php
 
     get_template_part('template-parts/home-page', 'hero');

@@ -7,36 +7,53 @@ const jsWatch = ["./assets/js/app.js"],
 
 // Initialize modules
 // Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
-const gulp = require("gulp");
+import gulp from "gulp";
 const { src, dest, watch, series, parallel } = gulp;
 
 // Importing all the Gulp-related packages we want to use
-const sourcemaps = require("gulp-sourcemaps"),
-  sass = require("gulp-sass")(require("sass")),
-  babel = require("gulp-babel"),
-  minifyjs = require("gulp-uglify-es").default,
-  autoPrefixer = require("gulp-autoprefixer"),
-  plumber = require("gulp-plumber"),
-  concat = require("gulp-concat"),
-  merge = require("merge2");
+import pkg from "gulp-sourcemaps";
+const { init, write } = pkg;
+import gulpSass from "gulp-sass";
+import * as sass from "sass";
+const sassCompiler = gulpSass(sass);
+import autoPrefixer from "gulp-autoprefixer";
+import svgSprite from "gulp-svg-sprite";
+import babel from "gulp-babel";
+import uglify from "gulp-uglify-es";
+const minifyjs = uglify.default;
+import plumber from "gulp-plumber";
+import concat from "gulp-concat";
+import merge from "merge2";
+
+// SVG спрайт конфігурація
+const svgConfig = {
+  mode: {
+    symbol: {
+      sprite: "sprite.svg", // Назва спрайта
+    },
+  },
+};
 
 // Sass task: compiles the style.scss file into style.css
 function scssTask() {
-  const cssBackFiles = src(cssFiles, { base: "./" })
+  const cssBackFiles = src(
+    ["node_modules/normalize.css/normalize.css", ...cssFiles],
+    { base: "./" }
+  )
     .pipe(
       autoPrefixer({
         cascade: false,
       })
     )
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    .pipe(init())
     .pipe(
-      sass({
+      sassCompiler({
         outputStyle: "compressed",
       })
     )
     .pipe(concat("app.min.css"))
-    .pipe(sourcemaps.write("."))
+    .pipe(write("."))
     .pipe(dest("./assets/scss/"));
 
   return merge(cssBackFiles);
@@ -64,12 +81,23 @@ function jsTask() {
   return merge(jsBackFiles);
 }
 
+// SVG Sprite Task
+function svgSpriteTask() {
+  return src("./assets/svg/*.svg") // Шлях до SVG файлів
+    .pipe(svgSprite(svgConfig))
+    .pipe(dest("./assets/images/sprites")); // Шлях для збереження спрайта
+}
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
-  watch([...cssWatch, ...jsWatch], series(parallel(scssTask, jsTask)));
+  watch(
+    [...cssWatch, ...jsWatch, "./assets/svg/*.svg"],
+    series(parallel(scssTask, jsTask, svgSpriteTask))
+  );
 }
 
 // Export the default Gulp task, so it can be run
 // Runs the scss and js tasks simultaneously then watch task
-exports.default = series(parallel(scssTask, jsTask), watchTask);
+const _default = series(parallel(scssTask, jsTask, svgSpriteTask), watchTask);
+export { _default as default };

@@ -1,15 +1,9 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
 
-  // &.menu-open {
-  //   overflow: hidden;
-  // }
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 p,

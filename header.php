@@ -21,6 +21,9 @@ if (!defined('ABSPATH')) exit; ?>
 
             <div class="header-menu__wrapper">
                 <?php $logo = get_field('logo', 'option'); ?>
+                <?php $phone = get_field('phone', 'option'); ?>
+                <?php $instagram = get_field('instagram', 'option'); ?>
+
                 <?php if ($logo <> '') : ?>
                     <a class="logo" href="<?php echo home_url(); ?>">
                         <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
@@ -36,6 +39,25 @@ if (!defined('ABSPATH')) exit; ?>
                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 ]);
                 ?>
+            </div>
+
+            <div class="link-wrapper">
+                <?php if ($phone <> '') : ?>
+                    <a class="link link--phone" href="tel:<?php echo str_replace(['-', '(', ')', ' '], '', $phone); ?>">
+                        <svg class="link__icon">
+                            <use href="<?php echo get_template_directory_uri() . '/assets/images/sprites/symbol/sprite.svg#assets--svg--phone'; ?>" />
+                            </use>
+                        </svg>
+                    </a>
+                <?php endif; ?>
+                <?php if ($instagram <> '') : ?>
+                    <a class="link link--instagram" href="<?php echo $instagram; ?>" target="_blank" rel="noopener noreferrer">
+                        <svg class="link__icon">
+                            <use href="<?php echo get_template_directory_uri() . '/assets/images/sprites/symbol/sprite.svg#assets--svg--instagram'; ?>" />
+                            </use>
+                        </svg>
+                    </a>
+                <?php endif; ?>
             </div>
 
             <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити мобільне меню.">

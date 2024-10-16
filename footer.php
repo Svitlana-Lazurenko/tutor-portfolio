@@ -5,12 +5,16 @@ if (!defined('ABSPATH')) exit; ?>
 </footer>
 
 <div class="menu-container js-menu-container" aria-hidden="true">
+    <?php $phone = get_field('phone', 'option'); ?>
+    <?php $instagram = get_field('instagram', 'option'); ?>
+
     <button type="button" class="menu-button js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Закрити мобільне меню.">
         <svg class="menu-button__icon">
             <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--cross"'; ?>">
             </use>
         </svg>
     </button>
+
     <?php
     wp_nav_menu([
         'theme_location' => "mobile_menu",
@@ -20,12 +24,34 @@ if (!defined('ABSPATH')) exit; ?>
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
     ]);
     ?>
+
+    <div class="link-wrapper">
+        <?php if ($phone <> '') : ?>
+            <a class="link link--phone" href="tel:<?php echo str_replace(['-', '(', ')', ' '], '', $phone); ?>">
+                <svg class="link__icon">
+                    <use href="<?php echo get_template_directory_uri() . '/assets/images/sprites/symbol/sprite.svg#assets--svg--phone'; ?>" />
+                    </use>
+                </svg>
+            </a>
+        <?php endif; ?>
+        <?php if ($instagram <> '') : ?>
+            <a class="link link--instagram" href="<?php echo $instagram; ?>" target="_blank" rel="noopener noreferrer">
+                <svg class="link__icon">
+                    <use href="<?php echo get_template_directory_uri() . '/assets/images/sprites/symbol/sprite.svg#assets--svg--instagram'; ?>" />
+                    </use>
+                </svg>
+            </a>
+        <?php endif; ?>
+    </div>
 </div>
 
 <div class="backdrop is-hidden" aria-hidden="true">
     <div class="modal">
-        <form name="" class="form">
-            <button type="submit" class="btn js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
+        <form name="enrollment_form" class="form" autocomplete="on">
+            <p class="form__description">Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення</p>
+            <input autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
+            <input autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
+            <button type="submit" class="btn btn--primary js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
                 Записатись
             </button>
         </form>

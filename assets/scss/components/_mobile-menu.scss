@@ -39,8 +39,8 @@
       & > a {
         display: inline-block;
         color: $color-primary-light;
-        font-size: rem(50);
-        font-weight: 300;
+        // font-size: rem(50);
+        // font-weight: 300;
 
         @include media(psw) {
           font-size: rem(55);

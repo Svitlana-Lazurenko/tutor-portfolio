@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  // width: 100%;
   max-width: 1640px;
   margin: 0 auto;
   padding-left: 10px;
@@ -26,5 +26,11 @@
 
   &--flex {
     display: flex;
+  }
+}
+
+.header {
+  .container--flex {
+    justify-content: space-between;
   }
 }

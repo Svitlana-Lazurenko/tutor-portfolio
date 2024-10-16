@@ -18,22 +18,25 @@ if (!defined('ABSPATH')) exit; ?>
     <header class="header">
         <div class="container container--flex">
 
-            <?php $logo = get_field('logo', 'option'); ?>
-            <?php if ($logo <> '') : ?>
-                <a class="logo" href="<?php echo home_url(); ?>">
-                    <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-                </a>
-            <?php endif; ?>
 
-            <?php
-            wp_nav_menu([
-                'theme_location' => "header_menu",
-                'menu_id' => 'header-menu',
-                'container' => 'nav',
-                'container_class' => 'header-menu',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            ]);
-            ?>
+            <div class="header-menu__wrapper">
+                <?php $logo = get_field('logo', 'option'); ?>
+                <?php if ($logo <> '') : ?>
+                    <a class="logo" href="<?php echo home_url(); ?>">
+                        <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                    </a>
+                <?php endif; ?>
+
+                <?php
+                wp_nav_menu([
+                    'theme_location' => "header_menu",
+                    'menu_id' => 'header-menu',
+                    'container' => 'nav',
+                    'container_class' => 'header-menu',
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                ]);
+                ?>
+            </div>
 
             <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити мобільне меню.">
                 <svg class="menu-button__icon">

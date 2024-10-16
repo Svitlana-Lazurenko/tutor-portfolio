@@ -13,4 +13,8 @@
 }
 
 .menu-button {
+  &__icon {
+    width: rem(30);
+    height: rem(30);
+  }
 }

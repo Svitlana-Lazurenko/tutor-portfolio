@@ -4,6 +4,10 @@ body {
   &.menu-open {
     overflow: hidden;
   }
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 p,

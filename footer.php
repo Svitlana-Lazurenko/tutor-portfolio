@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit; ?>
 </footer>
 
 <div class="menu-container js-menu-container" aria-hidden="true">
-    <button type="button" class="menu-button js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Close mobile menu">
+    <button type="button" class="menu-button js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Закрити мобільне меню.">
         <svg class="menu-button__icon">
             <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--cross"'; ?>">
             </use>
@@ -22,7 +22,14 @@ if (!defined('ABSPATH')) exit; ?>
     ?>
 </div>
 
-<div class="modal-window">
+<div class="backdrop is-hidden" aria-hidden="true">
+    <div class="modal">
+        <form name="" class="form">
+            <button type="submit" class="btn js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
+                Записатись
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php wp_footer(); ?>

@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) exit; ?>
             ]);
             ?>
 
-            <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
+            <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити мобільне меню.">
                 <svg class="menu-button__icon">
                     <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--menu-hamburger"'; ?>"></use>
                 </svg>

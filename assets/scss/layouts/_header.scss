@@ -2,7 +2,10 @@
 }
 
 .header-menu__wrapper {
-  display: flex;
+  display: none;
+  @include media(md) {
+    display: flex;
+  }
 }
 
 .header-menu > ul {

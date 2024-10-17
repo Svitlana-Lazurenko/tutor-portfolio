@@ -16,12 +16,14 @@ if (!defined('ABSPATH')) exit; ?>
                     $reviewText = $review['review_text'];
                 ?>
                     <li class="reviews__item">
-                        <?php if ($reviewName <> '') : ?>
-                            <span class="reviews__name"><?php echo $reviewName; ?></span>
-                        <?php endif; ?>
-                        <?php if ($reviewScore <> '') : ?>
-                            <span class="reviews__score"><?php echo $reviewScore; ?></span>
-                        <?php endif; ?>
+                        <h3 class="reviews__item-title">
+                            <?php if ($reviewName <> '') : ?>
+                                <span class="reviews__name"><?php echo $reviewName; ?></span>
+                            <?php endif; ?>
+                            <?php if ($reviewScore <> '') : ?>
+                                <span class="reviews__score"><?php echo $reviewScore; ?></span>
+                            <?php endif; ?>
+                        </h3>
                         <?php if ($reviewText <> '') : ?>
                             <div class="reviews__text"><?php echo $reviewText; ?></div>
                         <?php endif; ?>

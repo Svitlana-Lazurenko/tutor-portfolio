@@ -38,17 +38,14 @@
       // Links
       & > a {
         display: inline-block;
-        color: $color-primary-light;
-        // font-size: rem(50);
-        // font-weight: 300;
 
-        @include media(psw) {
-          font-size: rem(55);
-        }
+        // @include media(psw) {
+        //   font-size: rem(55);
+        // }
 
-        @include media(ms) {
-          font-size: rem(60);
-        }
+        // @include media(ms) {
+        //   font-size: rem(60);
+        // }
 
         &::after {
           content: "";

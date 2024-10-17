@@ -1,25 +1,54 @@
-// body {
+body {
+  font-family: $font-base;
+  font-size: rem(36);
+  color: $color-text-1;
+}
 
-// }
+h1 {
+  font-family: $font-accent;
+}
 
-// h1 {
-// }
+h2 {
+  font-family: $font-accent;
+  font-size: rem(64);
+}
 
-// h2 {
+h3 {
+  font-family: $font-accent;
+  font-size: rem(96);
+  color: $color-accent;
+}
 
-// }
+strong {
+  font-weight: inherit;
+  color: $color-accent;
+}
 
-// h3 {
-// }
+.hero__text {
+  font-family: $font-accent;
+  font-size: rem(64);
+}
 
-// h4 {
-// }
+.reviews__text {
+  color: $color-text-2;
+}
 
-// h5 {
-// }
+.header-menu a {
+  color: $color-text-1;
+}
 
-// h6 {
-// }
+.mobile-menu a {
+  font-size: rem(24);
+  color: $color-text-1;
+}
 
-// p {
-// }
+.input::placeholder {
+  font-family: $font-base;
+  font-size: rem(36);
+}
+
+.btn--primary {
+  // font-family: $font-base;
+  font-size: rem(48);
+  color: $color-text-light;
+}

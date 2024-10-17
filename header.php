@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) exit; ?>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="header" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/paper-big.webp'; ?>);">
+    <header class="header">
         <div class="container container--flex">
 
             <?php $logo = get_field('logo', 'option'); ?>

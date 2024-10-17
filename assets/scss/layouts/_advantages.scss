@@ -1,16 +1,43 @@
 .advantages {
   position: relative;
+  background-image: url("../images/paper-big.webp");
+
+  &::before {
+    content: "";
+    background-image: url("../images/plant-2.svg");
+    width: rem(300);
+    height: rem(300);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    // top: 100px;
+    // left: -100px;
+  }
 
   &__title {
+    background-image: url("../images/paper-narrow-2.webp");
+    background-repeat: no-repeat;
   }
 }
 
 .advantages-list {
   counter-reset: list-counter; /* Initialize the counter */
 
+  @include media(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(50);
+  }
+
   &__item {
     counter-increment: list-counter; /* Increase the counter */
     list-style: none; /* Remove standard numbering */
+
+    @include media(md) {
+      flex-basis: calc((100% - rem(50)) / 2);
+    }
 
     &:before {
       content: "0" counter(list-counter);

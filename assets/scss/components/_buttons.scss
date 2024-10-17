@@ -1,12 +1,8 @@
 .btn {
-  &--main {
-    &:hover,
-    &:focus {
-    }
-  }
+  border: none;
 
   &--open {
-    background-color: aqua;
+    background-color: transparent;
     @include media(md) {
       display: none;
     }
@@ -17,7 +13,7 @@
   }
 
   &--close {
-    background-color: aqua;
+    background-color: transparent;
     @include media(md) {
       display: none;
     }
@@ -25,5 +21,34 @@
       width: rem(30);
       height: rem(30);
     }
+  }
+}
+
+.btn-main {
+  border: none;
+  background-color: $color-accent;
+  border-radius: 10px;
+  transition: filter 0.5s linear;
+  width: 100%;
+  max-width: rem(335);
+
+  @include media(md) {
+    max-width: rem(490);
+  }
+
+  &:hover,
+  &:focus {
+    filter: saturate(60%);
+  }
+
+  &--hero {
+    position: absolute;
+    bottom: 0;
+    @include media(md) {
+      position: static;
+    }
+  }
+
+  &--modal {
   }
 }

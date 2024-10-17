@@ -1,6 +1,7 @@
 .container {
   // width: 100%;
-  max-width: 1640px;
+  // max-width: 1640px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -33,7 +34,16 @@
 
 .header {
   .container--flex {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.hero {
+  .container--flex {
+    @include media(md) {
+      align-items: center;
+    }
   }
 }

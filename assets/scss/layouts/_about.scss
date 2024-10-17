@@ -1,32 +1,70 @@
 .about {
   position: relative;
+  background-image: url("../images/paper-diagonal.webp");
+  background-repeat: no-repeat;
 
   &__title {
+    background-image: url("../images/paper-narrow-1.webp");
+    background-repeat: no-repeat;
   }
 
   &__text {
+    &::before {
+      content: "";
+      background-image: url("../images/plant-5.svg");
+      width: rem(300);
+      height: rem(300);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      // top: 100px;
+      // left: -100px;
+    }
   }
 }
 
 .about-info {
+  @include media(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(25);
+  }
+
   &__text {
+    @include media(md) {
+      flex-basis: calc((100% - rem(50)) / 3);
+    }
   }
 
   &__text--number {
+    background-image: url("../images/paper-small-1.webp");
+    background-repeat: no-repeat;
   }
 
   &__text--duration {
+    background-image: url("../images/paper-small-2.webp");
+    background-repeat: no-repeat;
   }
 
   &__text--frequency {
+    background-image: url("../images/paper-small-3.webp");
+    background-repeat: no-repeat;
   }
 
   &__text--format {
+    background-image: url("../images/paper-small-4.webp");
+    background-repeat: no-repeat;
   }
 
   &__text--time {
+    background-image: url("../images/paper-small-5.webp");
+    background-repeat: no-repeat;
   }
 
   &__text--price {
+    background-image: url("../images/paper-small-6.webp");
+    background-repeat: no-repeat;
   }
 }

@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) exit; ?>
                     <li class="reviews-list__item">
                         <h3 class="reviews-list__item-title">
                             <?php if ($reviewName <> '') : ?>
-                                <span class="reviews-list__name"><?php echo $reviewName; ?></span>
+                                <span class="reviews-list__name"><?php echo $reviewName; ?></span>,
                             <?php endif; ?>
                             <?php if ($reviewScore <> '') : ?>
                                 <span class="reviews-list__score"><?php echo $reviewScore; ?></span>

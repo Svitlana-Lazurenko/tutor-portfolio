@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) exit; ?>
             <p class="form__description">Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення</p>
             <input class="form__input" autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
             <input class="form__input" autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
-            <button type="submit" class="btn btn--main js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
+            <button type="submit" class="btn-main btn-main--modal js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
                 Записатись
             </button>
         </form>

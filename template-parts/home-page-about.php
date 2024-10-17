@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) exit; ?>
 
 <section id="about" class="about">
     <div class="container">
-        <h2 class="about__title">ПРО КУРС</h2>
+        <h2 class="about__title">Про курс</h2>
 
         <?php $aboutText = get_field('about_text');
         $aboutInfo = get_field('about_info');

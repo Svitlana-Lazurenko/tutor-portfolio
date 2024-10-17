@@ -3,6 +3,6 @@ if (!defined('ABSPATH')) exit; ?>
 
 <section id="path" class="path">
     <div class="container">
-        ШЛЯХ ДО ЗНАНЬ
+        Шлях до знань
     </div>
 </section>

@@ -1,4 +1,4 @@
-// =========================Mobile menu==================================
+// ========================= Mobile menu ==================================
 
 (() => {
   const mobileMenu = document.querySelector(".js-menu-container");
@@ -33,7 +33,7 @@
   });
 })();
 
-// =========================Modal window==================================
+// ========================= Modal window ==================================
 (() => {
   const openModalBtn = document.querySelector(".js-open-modal");
   const closeModalBtn = document.querySelector(".js-close-modal");
@@ -76,3 +76,29 @@
 
   backdrop.addEventListener("click", onBackdropClick);
 })();
+
+// ============== Add the "is-selected" class to selected anchor links ===============
+window.addEventListener("scroll", function () {
+  const sections = document.querySelectorAll("section");
+  const menuLinks = document.querySelectorAll(".header-menu a, .mobile-menu a");
+
+  let scrollPosition = window.scrollY + window.innerHeight * 0.3;
+
+  sections.forEach(function (section) {
+    let sectionTop = section.offsetTop;
+    let sectionHeight = section.offsetHeight;
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      let targetId = section.getAttribute("id"); // Get the ID of the section
+      menuLinks.forEach(function (link) {
+        link.classList.remove("is-selected"); // Remove the class "is-selected" from all links
+        if (link.getAttribute("href") === "#" + targetId) {
+          link.classList.add("is-selected"); // Add a class for the corresponding link
+        }
+      });
+    }
+  });
+});

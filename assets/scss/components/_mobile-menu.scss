@@ -38,44 +38,8 @@
       // Links
       & > a {
         display: inline-block;
-
-        // @include media(psw) {
-        //   font-size: rem(55);
-        // }
-
-        // @include media(ms) {
-        //   font-size: rem(60);
-        // }
-
-        &::after {
-          content: "";
-          display: block;
-          width: 0;
-          height: 1px;
-          background-color: $color-primary-light;
-          margin-top: rem(3.5);
-          transition: width 0.5s linear;
-        }
-
-        &:hover,
-        &:focus {
-          &::after {
-            width: 100%;
-          }
-        }
-      }
-
-      // Current menu-item
-      &.current-menu-item {
-        // Link of current menu-item
-        & > a::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 1px;
-          background-color: $color-primary-light;
-          margin-top: rem(3.5);
-          transition: width 1s linear;
+        &.is-selected {
+          text-decoration: underline;
         }
       }
     }

@@ -1,2 +1,26 @@
 .advantages {
 }
+.container {
+}
+.advantages__title {
+}
+.advantages-list {
+  counter-reset: list-counter; /* Initialize the counter */
+
+  &__item {
+    counter-increment: list-counter; /* Increase the counter */
+    list-style: none; /* Remove standard numbering */
+
+    &:before {
+      content: "0" counter(list-counter);
+    }
+
+    /* For elements with a number greater than 9 */
+    &:nth-child(n + 10):before {
+      content: counter(list-counter); /* No extra null */
+    }
+  }
+}
+
+.advantages-list__text {
+}

@@ -1,9 +1,10 @@
 .advantages {
+  position: relative;
+
+  &__title {
+  }
 }
-.container {
-}
-.advantages__title {
-}
+
 .advantages-list {
   counter-reset: list-counter; /* Initialize the counter */
 
@@ -20,7 +21,7 @@
       content: counter(list-counter); /* No extra null */
     }
   }
-}
 
-.advantages-list__text {
+  &__text {
+  }
 }

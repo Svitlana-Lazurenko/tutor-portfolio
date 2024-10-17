@@ -1,24 +1,29 @@
 .btn {
-  &--primary {
+  &--main {
     &:hover,
     &:focus {
     }
   }
 
-  &--secondary {
-    &:hover,
-    &:focus {
+  &--open {
+    background-color: aqua;
+    @include media(md) {
+      display: none;
+    }
+    &__icon {
+      width: rem(30);
+      height: rem(30);
     }
   }
-}
 
-.menu-button {
-  background-color: aqua;
-  @include media(md) {
-    display: none;
-  }
-  &__icon {
-    width: rem(30);
-    height: rem(30);
+  &--close {
+    background-color: aqua;
+    @include media(md) {
+      display: none;
+    }
+    &__icon {
+      width: rem(30);
+      height: rem(30);
+    }
   }
 }

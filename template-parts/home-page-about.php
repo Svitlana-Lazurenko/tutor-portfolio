@@ -1,7 +1,8 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section id="about" class="about">
+<section id="about-2" class="about">
+    <div id="about" class="scroll-point visually-hidden"></div>
     <div class="container">
         <h2 class="about__title">Про курс</h2>
 

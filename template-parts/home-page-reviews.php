@@ -1,7 +1,8 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section id="reviews" class="reviews">
+<section id="reviews-2" class="reviews">
+    <div id="reviews" class="scroll-point visually-hidden"></div>
     <div class="container">
         <h2 class="reviews__title">Відгуки</h2>
 

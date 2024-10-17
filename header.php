@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) exit; ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> dir="ltr">
+<html <?php language_attributes(); ?> dir="ltr" id="top">
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
@@ -15,20 +15,20 @@ if (!defined('ABSPATH')) exit; ?>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="header">
+    <header class="header" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/paper-big.webp'; ?>);">
         <div class="container container--flex">
 
             <?php $logo = get_field('logo', 'option'); ?>
             <?php $phone = get_field('phone', 'option'); ?>
             <?php $instagram = get_field('instagram', 'option'); ?>
 
-            <?php if ($logo <> '') : ?>
-                <a class="logo" href="<?php echo home_url(); ?>">
-                    <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
-                </a>
-            <?php endif; ?>
+            <div class="header-menu__wrapper-left">
+                <?php if ($logo <> '') : ?>
+                    <a class="logo" href="<?php echo home_url(); ?>#top">
+                        <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                    </a>
+                <?php endif; ?>
 
-            <div class="header-menu__wrapper">
                 <?php
                 wp_nav_menu([
                     'theme_location' => "header_menu",
@@ -38,8 +38,9 @@ if (!defined('ABSPATH')) exit; ?>
                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 ]);
                 ?>
+            </div>
 
-
+            <div class="header-menu__wrapper-right">
                 <div class="link-wrapper">
                     <?php if ($phone <> '') : ?>
                         <a class="link link--phone" href="tel:<?php echo str_replace(['-', '(', ')', ' '], '', $phone); ?>">
@@ -58,13 +59,14 @@ if (!defined('ABSPATH')) exit; ?>
                         </a>
                     <?php endif; ?>
                 </div>
-            </div>
 
-            <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити мобільне меню.">
-                <svg class="menu-button__icon">
-                    <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--menu-hamburger"'; ?>"></use>
-                </svg>
-            </button>
+
+                <button type="button" class="btn btn--open js-open-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Відкрити мобільне меню.">
+                    <svg class="btn--open__icon">
+                        <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--menu-hamburger"'; ?>"></use>
+                    </svg>
+                </button>
+            </div>
 
         </div>
     </header>

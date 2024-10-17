@@ -1,7 +1,8 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section id="advantages" class="advantages">
+<section id="advantages-2" class="advantages" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/paper-big.webp'; ?>);">
+    <div id="advantages" class="scroll-point visually-hidden"></div>
     <div class="container">
         <h2 class="advantages__title">Переваги курсу</h2>
 

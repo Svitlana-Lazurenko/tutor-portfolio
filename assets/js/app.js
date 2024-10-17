@@ -78,6 +78,12 @@
 })();
 
 // ============== Add the "is-selected" class to selected anchor links ===============
+
+// This code for fixed header.
+// In order for the code to work correctly, each section should be given an id at
+// the end of which there are the characters "-2". To the real point to which scrolling
+// occurs, give an id that coincides with the href of the <a> tag.
+
 window.addEventListener("scroll", function () {
   const sections = document.querySelectorAll("section");
   const menuLinks = document.querySelectorAll(".header-menu a, .mobile-menu a");
@@ -92,7 +98,7 @@ window.addEventListener("scroll", function () {
       scrollPosition >= sectionTop &&
       scrollPosition < sectionTop + sectionHeight
     ) {
-      let targetId = section.getAttribute("id"); // Get the ID of the section
+      let targetId = section.getAttribute("id").slice(0, -2); // Get the ID of the section without last two characters
       menuLinks.forEach(function (link) {
         link.classList.remove("is-selected"); // Remove the class "is-selected" from all links
         if (link.getAttribute("href") === "#" + targetId) {

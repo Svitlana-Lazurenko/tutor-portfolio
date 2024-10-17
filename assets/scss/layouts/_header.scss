@@ -1,8 +1,19 @@
 .header {
   position: fixed;
+  top: 0;
+  padding: rem(5) 0;
+  width: 100%;
+  z-index: 1;
 }
 
-.header-menu__wrapper {
+.header-menu__wrapper-left {
+  @include media(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-menu {
   display: none;
   @include media(md) {
     display: flex;
@@ -18,8 +29,13 @@
 }
 
 .logo {
-  width: rem(30);
-  height: rem(30);
+  display: block;
+  width: rem(60);
+  height: rem(60);
+  @include media(md) {
+    width: rem(90);
+    height: rem(90);
+  }
 }
 
 .logo__img {

@@ -8,8 +8,8 @@ if (!defined('ABSPATH')) exit; ?>
     <?php $phone = get_field('phone', 'option'); ?>
     <?php $instagram = get_field('instagram', 'option'); ?>
 
-    <button type="button" class="menu-button js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Закрити мобільне меню.">
-        <svg class="menu-button__icon">
+    <button type="button" class="btn btn--close js-close-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Закрити мобільне меню.">
+        <svg class="btn--open__icon">
             <use href="<?php echo get_template_directory_uri() . './assets/images/sprites/symbol/sprite.svg#assets--svg--cross"'; ?>">
             </use>
         </svg>
@@ -49,9 +49,9 @@ if (!defined('ABSPATH')) exit; ?>
     <div class="modal">
         <form name="enrollment_form" class="form" autocomplete="on">
             <p class="form__description">Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення</p>
-            <input autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
-            <input autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
-            <button type="submit" class="btn btn--primary js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
+            <input class="form__input" autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
+            <input class="form__input" autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
+            <button type="submit" class="btn btn--main js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
                 Записатись
             </button>
         </form>

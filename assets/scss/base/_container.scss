@@ -25,12 +25,15 @@
   }
 
   &--flex {
-    display: flex;
+    @include media(md) {
+      display: flex;
+    }
   }
 }
 
 .header {
   .container--flex {
     justify-content: space-between;
+    align-items: center;
   }
 }

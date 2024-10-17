@@ -1,4 +1,10 @@
 .link-wrapper {
+  .header & {
+    display: none;
+    @include media(md) {
+      display: flex;
+    }
+  }
 }
 .link {
 }

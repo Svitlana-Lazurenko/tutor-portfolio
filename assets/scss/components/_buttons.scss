@@ -31,6 +31,8 @@
   transition: filter 0.5s linear;
   width: 100%;
   max-width: rem(335);
+  margin: 0 auto;
+  padding: rem(10) 0;
 
   @include media(md) {
     max-width: rem(490);
@@ -43,9 +45,12 @@
 
   &--hero {
     position: absolute;
-    bottom: 0;
+    bottom: rem(100);
+    left: 50%;
+    transform: translate(-50%, -50%);
     @include media(md) {
       position: static;
+      transform: none;
     }
   }
 

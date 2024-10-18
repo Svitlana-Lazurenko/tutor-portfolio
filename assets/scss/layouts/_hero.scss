@@ -1,11 +1,24 @@
 .hero {
   background-image: url("../images/paper-big.webp");
   position: relative;
+  padding: rem(30) 0 rem(230);
+  @include media(md) {
+    padding: rem(30) 0 rem(150);
+  }
 
   &__text-wrapper {
+    @include media(md) {
+      width: 50%;
+    }
   }
 
   &__text {
+    width: 80%;
+    margin: 0 auto;
+    @include media(md) {
+      width: 100%;
+      margin-bottom: rem(90);
+    }
   }
 
   &__img-thumb {
@@ -21,15 +34,15 @@
     &::before {
       content: "";
       background-image: url("../images/branch.webp");
-      width: rem(300);
-      height: rem(300);
+      width: 60%;
+      height: 100%;
       background-size: contain;
       background-repeat: no-repeat;
       display: block;
       position: absolute;
       z-index: 1;
-      top: 100px;
-      left: -100px;
+      bottom: -25%;
+      left: -15%;
     }
   }
 

@@ -1,71 +1,147 @@
 .about {
   position: relative;
   background-color: $color-primary-light;
-  background-image: url("../images/paper-diagonal.webp");
-  background-repeat: no-repeat;
+  padding-bottom: rem(100);
 
-  &__title {
+  &__title-wrapper {
     background-image: url("../images/paper-narrow-1.webp");
     background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    top: rem(-30);
+    left: 50%;
+    transform: translate(-50%, rem(-30));
+    width: 90%;
+    aspect-ratio: 2.5 / 1;
+    z-index: 5;
+
+    @include media(md) {
+      left: auto;
+      transform: none;
+      top: rem(-90);
+      width: rem(500);
+    }
+
+    @include media(def) {
+      top: rem(-120);
+      width: rem(660);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__img {
+    margin-top: 20%;
+    width: rem(150);
+    float: right;
+    shape-outside: url("../images/plant-5.svg");
+    shape-margin: rem(20);
+
+    @include media(psw) {
+      margin-top: 25%;
+      width: rem(225);
+    }
+
+    @include media(ms) {
+      width: rem(300);
+    }
+
+    @include media(md) {
+      margin-top: rem(10);
+      width: rem(300);
+    }
+
+    @include media(def) {
+      margin-top: rem(-10);
+      width: rem(345);
+    }
   }
 
   &__text {
-    &::before {
-      content: "";
-      background-image: url("../images/plant-5.svg");
-      width: rem(300);
-      height: rem(300);
-      background-size: contain;
-      background-repeat: no-repeat;
-      display: block;
-      position: absolute;
-      z-index: 1;
-      // top: 100px;
-      // left: -100px;
+    padding: 25% 0 rem(75);
+
+    @include media(psw) {
+      padding-top: 30%;
+    }
+
+    @include media(md) {
+      padding: rem(138) 0 rem(75);
+    }
+
+    @include media(def) {
+      padding: rem(180) 0 rem(75);
+      width: 65%;
     }
   }
 }
 
 .about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(25);
+
   @include media(md) {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: rem(25);
   }
 
-  &__text {
+  &__card {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 80%;
+    aspect-ratio: 3 / 1;
+    margin: 0 auto;
+
     @include media(md) {
+      flex-basis: calc((100% - rem(25)) / 2);
+    }
+
+    @include media(def) {
       flex-basis: calc((100% - rem(50)) / 3);
+    }
+
+    &--number {
+      background-image: url("../images/paper-small-1.webp");
+    }
+
+    &--duration {
+      background-image: url("../images/paper-small-2.webp");
+    }
+
+    &--frequency {
+      background-image: url("../images/paper-small-3.webp");
+    }
+
+    &--format {
+      background-image: url("../images/paper-small-4.webp");
+      aspect-ratio: 1.8 / 1;
+    }
+
+    &--time {
+      background-image: url("../images/paper-small-5.webp");
+      aspect-ratio: 2.5 / 1;
+    }
+
+    &--price {
+      background-image: url("../images/paper-small-6.webp");
     }
   }
 
-  &__text--number {
-    background-image: url("../images/paper-small-1.webp");
-    background-repeat: no-repeat;
-  }
-
-  &__text--duration {
-    background-image: url("../images/paper-small-2.webp");
-    background-repeat: no-repeat;
-  }
-
-  &__text--frequency {
-    background-image: url("../images/paper-small-3.webp");
-    background-repeat: no-repeat;
-  }
-
-  &__text--format {
-    background-image: url("../images/paper-small-4.webp");
-    background-repeat: no-repeat;
-  }
-
-  &__text--time {
-    background-image: url("../images/paper-small-5.webp");
-    background-repeat: no-repeat;
-  }
-
-  &__text--price {
-    background-image: url("../images/paper-small-6.webp");
-    background-repeat: no-repeat;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
   }
 }

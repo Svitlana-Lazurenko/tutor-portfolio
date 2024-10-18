@@ -29,14 +29,8 @@
   background-color: $color-accent;
   border-radius: 10px;
   transition: filter 0.5s linear;
-  width: 100%;
-  max-width: rem(335);
   margin: 0 auto;
   padding: rem(10) 0;
-
-  @include media(md) {
-    max-width: rem(490);
-  }
 
   &:hover,
   &:focus {
@@ -48,9 +42,14 @@
     bottom: rem(100);
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: rem(490);
+
     @include media(md) {
       position: static;
       transform: none;
+      width: 100%;
+      max-width: rem(490);
     }
   }
 

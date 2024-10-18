@@ -3,6 +3,7 @@
     display: none;
     @include media(md) {
       display: flex;
+      gap: rem(30);
     }
   }
 }
@@ -11,8 +12,8 @@
 .link--phone {
 }
 .link__icon {
-  width: rem(20);
-  height: rem(20);
+  width: rem(50);
+  height: rem(50);
 }
 .link--instagram {
 }

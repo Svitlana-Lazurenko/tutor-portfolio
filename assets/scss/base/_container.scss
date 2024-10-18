@@ -25,6 +25,10 @@
     max-width: 100%;
   }
 
+  &--outer {
+    max-width: 1660px;
+  }
+
   &--flex {
     @include media(md) {
       display: flex;
@@ -32,18 +36,42 @@
   }
 }
 
-.header {
-  .container--flex {
-    display: flex;
-    justify-content: space-between;
+.header .container--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .container--flex {
+  @include media(md) {
     align-items: center;
+    justify-content: space-between;
   }
 }
 
-.hero {
-  .container--flex {
-    @include media(md) {
-      align-items: center;
-    }
+.about .container--outer {
+  background-image: url("../images/paper-diagonal.webp");
+  background-repeat: no-repeat;
+  background-size: 250px 310px;
+  background-position: 110% -120px;
+
+  @include media(psw) {
+    background-size: 300px 380px;
+    background-position: 110% -120px;
+  }
+
+  @include media(ms) {
+    background-size: 500px 610px;
+    background-position: 110% -120px;
+  }
+
+  @include media(md) {
+    background-size: 400px 500px;
+    background-position: 110% -200px;
+  }
+
+  @include media(def) {
+    background-size: 700px 800px;
+    background-position: 110% -500px;
   }
 }

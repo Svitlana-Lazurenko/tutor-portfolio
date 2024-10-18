@@ -1,14 +1,12 @@
 .hero {
   background-image: url("../images/paper-big.webp");
   position: relative;
-  padding: rem(30) 0 rem(230);
-  @include media(md) {
-    padding: rem(30) 0 rem(150);
-  }
+  padding: rem(30) 0 rem(150);
 
   &__text-wrapper {
     @include media(md) {
       width: 50%;
+      max-width: rem(500);
     }
   }
 
@@ -17,6 +15,10 @@
     margin: 0 auto;
     @include media(md) {
       width: 100%;
+      margin-bottom: rem(60);
+    }
+
+    @include media(def) {
       margin-bottom: rem(90);
     }
   }
@@ -24,11 +26,11 @@
   &__img-thumb {
     position: relative;
     width: 80%;
-    margin: rem(8) auto 0 auto;
+    margin: rem(8) auto 30% auto;
 
     @include media(md) {
       width: 50%;
-      margin: 0 0 0 rem(95);
+      margin: 0 0 0 rem(60);
     }
 
     &::before {
@@ -47,5 +49,7 @@
   }
 
   &__img {
+    background-color: transparent;
+    aspect-ratio: 1 / 1;
   }
 }

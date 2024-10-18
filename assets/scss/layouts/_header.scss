@@ -3,7 +3,7 @@
   top: 0;
   padding: rem(5) 0;
   width: 100%;
-  z-index: 10;
+  z-index: 99;
   background-image: url("../images/paper-big.webp");
 }
 
@@ -11,6 +11,7 @@
   @include media(md) {
     display: flex;
     align-items: center;
+    gap: rem(30);
   }
 }
 
@@ -24,6 +25,7 @@
 
 .header-menu > ul {
   display: flex;
+  gap: rem(30);
 
   & a.is-selected {
     text-decoration: underline;

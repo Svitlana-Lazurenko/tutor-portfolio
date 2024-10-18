@@ -9,9 +9,6 @@ if (!defined('_VERSION')) {
 // Styles and scripts
 require get_template_directory() . '/inc/_scripts.php';
 
-// Navigation menus
-require get_template_directory() . '/inc/_nav-menus.php';
-
 // ACF options page
 require get_template_directory() . '/inc/_acf-options-page.php';
 

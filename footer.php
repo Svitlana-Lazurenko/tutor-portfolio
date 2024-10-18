@@ -15,15 +15,14 @@ if (!defined('ABSPATH')) exit; ?>
         </svg>
     </button>
 
-    <?php
-    wp_nav_menu([
-        'theme_location' => "mobile_menu",
-        'menu_id' => 'mobile-menu',
-        'container' => 'nav',
-        'container_class' => 'mobile-menu',
-        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-    ]);
-    ?>
+    <nav class="mobile-menu">
+        <ul class="menu">
+            <li class="menu-item"><a href="#about">Про курс</a></li>
+            <li class="menu-item"><a href="#advantages">Переваги</a></li>
+            <li class="menu-item"><a href="#path">Шлях до знань</a></li>
+            <li class="menu-item"><a href="#reviews">Відгуки</a></li>
+        </ul>
+    </nav>
 
     <div class="link-wrapper">
         <?php if ($phone <> '') : ?>

@@ -24,20 +24,19 @@ if (!defined('ABSPATH')) exit; ?>
 
             <div class="header-menu__wrapper-left">
                 <?php if ($logo <> '') : ?>
-                    <a class="logo" href="<?php echo home_url(); ?>#top">
+                    <a class="logo" href="#top">
                         <img class="logo__img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
                     </a>
                 <?php endif; ?>
 
-                <?php
-                wp_nav_menu([
-                    'theme_location' => "header_menu",
-                    'menu_id' => 'header-menu',
-                    'container' => 'nav',
-                    'container_class' => 'header-menu',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                ]);
-                ?>
+                <nav class="header-menu">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="#about">Про курс</a></li>
+                        <li class="menu-item"><a href="#advantages">Переваги</a></li>
+                        <li class="menu-item"><a href="#path">Шлях до знань</a></li>
+                        <li class="menu-item"><a href="#reviews">Відгуки</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="header-menu__wrapper-right">

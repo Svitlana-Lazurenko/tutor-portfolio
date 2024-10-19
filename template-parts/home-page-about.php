@@ -1,13 +1,12 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section id="about-2" class="about">
-    <div id="about" class="scroll-point visually-hidden"></div>
+<section id="about" class="about">
     <div class="container container--outer">
+        <div class="about__img-1" aria-hidden="true">
+        </div>
+
         <div class="container">
-            <div class="about__title-wrapper">
-                <h2 class="about__title">Про курс</h2>
-            </div>
 
             <?php $aboutText = get_field('about_text');
             $aboutInfo = get_field('about_info');
@@ -19,9 +18,10 @@ if (!defined('ABSPATH')) exit; ?>
             $price = $aboutInfo['price'];
             ?>
 
-
-            <img class="about__img" src="<?php echo get_template_directory_uri() . '/assets/images/plant-5.svg'; ?>" alt="" aria-hidden="true" />
-
+            <div class="about__title-wrapper">
+                <h2 id="about" class="about__title">Про курс</h2>
+            </div>
+            <img class="about__img-2" src="<?php echo get_template_directory_uri() . '/assets/images/plant-5.svg'; ?>" alt="" aria-hidden="true" />
             <?php if ($aboutText <> '') : ?>
                 <div class="about__text"><?php echo $aboutText; ?></div>
             <?php endif; ?>

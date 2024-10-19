@@ -1,7 +1,23 @@
 .reviews {
-  position: relative;
   background-color: $color-primary-light;
   padding: rem(100) 0;
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -90px;
+    width: 80%;
+    aspect-ratio: 0.9/ 1;
+    background-image: url("../images/paper-diagonal.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100px 0;
+
+    @include media(md) {
+      width: 750px;
+      top: -520px;
+    }
+  }
 
   &__title {
     background-image: url("../images/paper-narrow-1.webp");

@@ -29,6 +29,8 @@
 
   & a.is-selected {
     text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: rem(10);
   }
 }
 

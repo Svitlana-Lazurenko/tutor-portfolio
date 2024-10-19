@@ -1,7 +1,23 @@
 .about {
-  position: relative;
   background-color: $color-primary-light;
   padding-bottom: rem(100);
+
+  &__img-1 {
+    position: absolute;
+    right: 0;
+    top: -90px;
+    width: 80%;
+    aspect-ratio: 0.9/ 1;
+    background-image: url("../images/paper-diagonal.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100px 0;
+
+    @include media(md) {
+      width: 750px;
+      top: -520px;
+    }
+  }
 
   &__title-wrapper {
     background-image: url("../images/paper-narrow-1.webp");
@@ -9,22 +25,21 @@
     background-size: contain;
     display: inline-block;
     position: absolute;
-    top: rem(-30);
+    top: -5%;
     left: 50%;
-    transform: translate(-50%, rem(-30));
+    transform: translate(-50%, -5%);
     width: 90%;
     aspect-ratio: 2.5 / 1;
-    z-index: 5;
+    z-index: 1;
 
     @include media(md) {
+      top: rem(-100);
       left: auto;
       transform: none;
-      top: rem(-90);
       width: rem(500);
     }
 
     @include media(def) {
-      top: rem(-120);
       width: rem(660);
     }
   }
@@ -37,20 +52,17 @@
     text-align: center;
   }
 
-  &__img {
+  &__img-2 {
     margin-top: 20%;
-    width: rem(150);
     float: right;
     shape-outside: url("../images/plant-5.svg");
     shape-margin: rem(20);
+    position: relative;
+    z-index: 1;
+    width: 45%;
 
     @include media(psw) {
       margin-top: 25%;
-      width: rem(225);
-    }
-
-    @include media(ms) {
-      width: rem(300);
     }
 
     @include media(md) {
@@ -66,6 +78,8 @@
 
   &__text {
     padding: 25% 0 rem(75);
+    position: relative;
+    z-index: 1;
 
     @include media(psw) {
       padding-top: 30%;

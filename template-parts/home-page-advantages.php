@@ -1,10 +1,10 @@
 <?php
 if (!defined('ABSPATH')) exit; ?>
 
-<section id="advantages-2" class="advantages">
-    <div id="advantages" class="scroll-point visually-hidden"></div>
+<section id="advantages" class="advantages">
     <div class="container">
-        <h2 class="advantages__title">Переваги курсу</h2>
+
+        <h2 id="advantages" class="advantages__title">Переваги курсу</h2>
 
         <?php $advantages = get_field('advantages'); ?>
 

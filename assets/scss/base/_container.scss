@@ -16,7 +16,7 @@
     padding-right: 20px;
   }
 
-  & &,
+  // & &,
   &--no-gap {
     padding: 0;
   }
@@ -25,8 +25,13 @@
     max-width: 100%;
   }
 
+  // An element that extends beyond the standard container should be placed outside
+  // the standard container, but in container--outer. This element should also be
+  // given position: absolute;
   &--outer {
     max-width: 1660px;
+    padding: 0;
+    position: relative;
   }
 
   &--flex {
@@ -49,29 +54,8 @@
   }
 }
 
-.about .container--outer {
-  background-image: url("../images/paper-diagonal.webp");
-  background-repeat: no-repeat;
-  background-size: 250px 310px;
-  background-position: 110% -120px;
-
-  @include media(psw) {
-    background-size: 300px 380px;
-    background-position: 110% -120px;
-  }
-
-  @include media(ms) {
-    background-size: 500px 610px;
-    background-position: 110% -120px;
-  }
-
-  @include media(md) {
-    background-size: 400px 500px;
-    background-position: 110% -200px;
-  }
-
-  @include media(def) {
-    background-size: 700px 800px;
-    background-position: 110% -500px;
-  }
+.about .container,
+.advantages .container,
+.reviews .container {
+  position: relative;
 }

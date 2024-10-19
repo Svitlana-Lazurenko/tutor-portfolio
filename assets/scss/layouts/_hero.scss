@@ -2,6 +2,7 @@
   background-image: url("../images/paper-big.webp");
   position: relative;
   padding: rem(30) 0 rem(150);
+  z-index: 1;
 
   &__text-wrapper {
     @include media(md) {
@@ -42,7 +43,7 @@
       background-repeat: no-repeat;
       display: block;
       position: absolute;
-      z-index: 1;
+      z-index: 2;
       bottom: -25%;
       left: -15%;
     }

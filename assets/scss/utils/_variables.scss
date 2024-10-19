@@ -3,6 +3,7 @@ $breakpoints: (
   // st: 320px,
   xs: 360px,
   psw: 412px,
+  psw-2: 640px,
   sm: 480px,
   ms: 640px,
   // psh: 732px,
@@ -10,11 +11,12 @@ $breakpoints: (
   // mf: 921px,
   def: 1024px,
   // hg: 1150px,
-  // lg: 1280px,
+  lg: 1280px,
   // xl: 1366px,
   // mg: 1440px,
-  // note: 1536px,
-  // container: 1610px,
+  note: 1536px,
+  container: 1170px,
+  container-outer: 1660px,
   // dt: 1920px,
 );
 

@@ -2,25 +2,34 @@
 if (!defined('ABSPATH')) exit; ?>
 
 <section id="advantages" class="advantages">
-    <div class="container">
+    <div class="container container--outer">
+        <div class="advantages__img-1" aria-hidden="true">
+        </div>
+        <div class="advantages__img-2" aria-hidden="true">
+        </div>
 
-        <h2 id="advantages" class="advantages__title">Переваги курсу</h2>
 
-        <?php $advantages = get_field('advantages'); ?>
 
-        <?php if (have_rows('advantages')) : ?>
-            <ol class="advantages-list">
-                <?php while (have_rows('advantages')) : the_row();
-                    $advantage = get_sub_field('advantage');
-                ?>
-                    <li class="advantages-list__item">
-                        <?php if ($advantage <> '') : ?>
-                            <div class="advantages-list__text"><?php echo $advantage; ?></div>
-                        <?php endif; ?>
-                    </li>
-                <?php endwhile; ?>
-            </ol>
-        <?php endif; ?>
+        <div class="container">
+            <div class="advantages__title-wrapper">
+                <h2 id="advantages" class="advantages__title">Переваги курсу</h2>
+            </div>
 
+            <?php $advantages = get_field('advantages'); ?>
+
+            <?php if (have_rows('advantages')) : ?>
+                <ol class="advantages-list">
+                    <?php while (have_rows('advantages')) : the_row();
+                        $advantage = get_sub_field('advantage');
+                    ?>
+                        <li class="advantages-list__item">
+                            <?php if ($advantage <> '') : ?>
+                                <div class="advantages-list__text"><?php echo $advantage; ?></div>
+                            <?php endif; ?>
+                        </li>
+                    <?php endwhile; ?>
+                </ol>
+            <?php endif; ?>
+        </div>
     </div>
 </section>

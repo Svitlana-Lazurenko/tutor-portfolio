@@ -19,35 +19,75 @@
     }
   }
 
-  &__title {
+  &__title-wrapper {
     background-image: url("../images/paper-narrow-1.webp");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    padding: rem(50) rem(100);
     position: absolute;
-    top: rem(-50);
+    top: rem(-30);
+    left: 50%;
+    transform: translate(-50%, rem(-30));
+    width: rem(300);
+    aspect-ratio: 2.5 / 1;
+    z-index: 1;
+
+    @include media(xs) {
+      top: rem(-45);
+      width: rem(350);
+    }
+
+    @include media(sm) {
+      top: rem(-70);
+      width: rem(500);
+    }
+
+    @include media(md) {
+      top: rem(-100);
+      left: auto;
+      transform: none;
+    }
+
+    @include media(def) {
+      width: rem(660);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
   }
 }
 
 .reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+
   @include media(md) {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: rem(10);
+    padding: 0 rem(80);
   }
 
   &__item {
     background-repeat: no-repeat;
     background-size: contain;
+    aspect-ratio: 1 / 0.7;
+    position: relative;
+
     @include media(md) {
       flex-basis: calc((100% - rem(10)) / 2);
     }
 
     &::before {
       content: "";
-      width: rem(300);
-      height: rem(300);
+      width: rem(60);
+      height: rem(60);
       background-size: contain;
       background-repeat: no-repeat;
       display: block;
@@ -74,6 +114,7 @@
 
     &:nth-child(3) {
       background-image: url("../images/paper-medium-3.webp");
+      background-position: center;
       &::before {
         background-image: url("../images/plant-2.svg");
       }
@@ -89,34 +130,45 @@
 
     &:nth-child(5) {
       background-image: url("../images/paper-medium-4.webp");
+      aspect-ratio: 1 / 0.85;
+      background-position: center;
       &::before {
         background-image: url("../images/plant-1.svg");
       }
     }
   }
 
+  &__item-review {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
   &__item-title {
-    &::before {
-      content: "";
-      // background-image: url("../images/plant-2.svg");
-      width: rem(300);
-      height: rem(300);
-      background-size: contain;
-      background-repeat: no-repeat;
-      display: block;
-      position: absolute;
-      z-index: 1;
-      // top: 100px;
-      // left: -100px;
-    }
+    // &::before {
+    //   content: "";
+    //   // background-image: url("../images/plant-2.svg");
+    //   width: rem(300);
+    //   height: rem(300);
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   display: block;
+    //   position: absolute;
+    //   z-index: 1;
+    //   // top: 100px;
+    //   // left: -100px;
+    // }
   }
 
-  &__name {
+  &__item-name {
   }
 
-  &__score {
+  &__item-score {
   }
 
-  &__text {
+  &__item-text {
   }
 }

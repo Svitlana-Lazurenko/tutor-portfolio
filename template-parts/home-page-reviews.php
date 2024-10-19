@@ -7,7 +7,9 @@ if (!defined('ABSPATH')) exit; ?>
         </div>
 
         <div class="container">
-            <h2 id="reviews" class="reviews__title">Відгуки</h2>
+            <div class="reviews__title-wrapper">
+                <h2 id="reviews" class="reviews__title">Відгуки</h2>
+            </div>
 
             <?php $reviews = get_field('reviews'); ?>
 
@@ -20,21 +22,24 @@ if (!defined('ABSPATH')) exit; ?>
                         $reviewText = $review['review_text'];
                     ?>
                         <li class="reviews-list__item">
-                            <h3 class="reviews-list__item-title">
-                                <?php if ($reviewName <> '') : ?>
-                                    <span class="reviews-list__name"><?php echo $reviewName; ?></span>,
+                            <div class="reviews-list__item-review">
+                                <h3 class="reviews-list__item-title">
+                                    <?php if ($reviewName <> '') : ?>
+                                        <span class="reviews-list__name"><?php echo $reviewName; ?></span>,
+                                    <?php endif; ?>
+                                    <?php if ($reviewScore <> '') : ?>
+                                        <span class="reviews-list__score"><?php echo $reviewScore; ?></span>
+                                    <?php endif; ?>
+                                </h3>
+                                <?php if ($reviewText <> '') : ?>
+                                    <div class="reviews-list__text"><?php echo $reviewText; ?></div>
                                 <?php endif; ?>
-                                <?php if ($reviewScore <> '') : ?>
-                                    <span class="reviews-list__score"><?php echo $reviewScore; ?></span>
-                                <?php endif; ?>
-                            </h3>
-                            <?php if ($reviewText <> '') : ?>
-                                <div class="reviews-list__text"><?php echo $reviewText; ?></div>
-                            <?php endif; ?>
+                            </div>
                         </li>
                     <?php endwhile; ?>
                 </ul>
             <?php endif; ?>
         </div>
+
     </div>
 </section>

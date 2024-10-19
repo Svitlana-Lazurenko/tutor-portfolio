@@ -1,51 +1,160 @@
 .advantages {
   background-image: url("../images/paper-big.webp");
-  padding: rem(100) 0;
+  padding: rem(200) 0 rem(100);
+  position: relative;
+  z-index: 1;
 
-  &::before {
-    content: "";
+  @include media(md) {
+    padding-bottom: rem(120);
+  }
+
+  &__img-1 {
+    background-image: url("../images/plant-3.svg"), url("../images/plant-4.svg");
+    background-repeat: no-repeat;
+    background-size: 30% 30%, 80% 80%;
+    background-position: 0 100%, 100% 100%;
+    width: rem(80);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: rem(-200);
+    right: 0;
+    z-index: 2;
+
+    @include media(md) {
+      // width: rem(220);
+      // height: rem(220);
+      // bottom: 20%;
+      // right: -10%;
+    }
+
+    @include media(lg) {
+      width: rem(220);
+      height: rem(220);
+      top: rem(-250);
+      right: 10%;
+    }
+  }
+
+  &__img-2 {
     background-image: url("../images/plant-2.svg");
-    width: rem(300);
-    height: rem(300);
+    width: 27%;
+    aspect-ratio: 1 / 1;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
     position: absolute;
-    z-index: 1;
-    // top: 100px;
-    // left: -100px;
+    bottom: rem(-50);
+
+    @include media(md) {
+      width: rem(120);
+    }
+
+    @include media(note) {
+      top: 50%;
+      bottom: auto;
+      left: 5%;
+      width: rem(200);
+    }
   }
 
-  &__title {
+  &__title-wrapper {
     background-image: url("../images/paper-narrow-2.webp");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    padding: rem(50) rem(100);
     position: absolute;
-    top: rem(-50);
+    top: rem(-215);
+    left: 50%;
+    transform: translate(-50%, rem(-30));
+    width: rem(350);
+    aspect-ratio: 2.5 / 1;
+    z-index: 1;
+
+    @include media(xs) {
+      top: rem(-220);
+      width: rem(400);
+    }
+
+    @include media(sm) {
+      top: rem(-250);
+      width: rem(540);
+    }
+
+    @include media(md) {
+      top: rem(-300);
+      left: auto;
+      right: 0;
+      transform: none;
+      width: rem(600);
+    }
+
+    @include media(def) {
+      top: rem(-320);
+      width: rem(826);
+    }
+
+    // @include media(container) {
+    //   right: 175px;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   background-image: url("../images/plant-3.svg"),
+    //     url("../images/plant-4.svg");
+    //   background-repeat: no-repeat;
+    //   background-size: 30% 30%, 80% 80%;
+    //   background-position: 0 100%, 100% 100%;
+    //   width: rem(80);
+    //   height: rem(80);
+    //   display: block;
+    //   position: absolute;
+    //   bottom: 20%;
+    //   right: 0;
+
+    //   @include media(md) {
+    //     width: rem(220);
+    //     height: rem(220);
+    //     bottom: 20%;
+    //     right: -10%;
+    //   }
+    // }
+  }
+
+  &__title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+    width: 100%;
   }
 }
 
 .advantages-list {
   counter-reset: list-counter; /* Initialize the counter */
+  padding: 0 rem(15);
 
   @include media(md) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(50);
+    -webkit-columns: 2;
+    columns: auto 2;
+    -webkit-column-gap: rem(60);
+    column-gap: rem(80);
   }
 
   &__item {
     counter-increment: list-counter; /* Increase the counter */
     list-style: none; /* Remove standard numbering */
+    display: flex;
+    gap: 10%;
+    margin-bottom: rem(40);
 
     @include media(md) {
-      flex-basis: calc((100% - rem(50)) / 2);
+      gap: 8%;
     }
 
     &:before {
       content: "0" counter(list-counter);
+      margin: rem(-10);
     }
 
     /* For elements with a number greater than 9 */

@@ -26,12 +26,10 @@
   }
 
   // An element that extends beyond the standard container should be placed outside
-  // the standard container, but in container--outer. This element should also be
-  // given position: absolute;
+  // the standard container, but in container--outer.
   &--outer {
     max-width: 1660px;
     padding: 0;
-    position: relative;
   }
 
   &--flex {
@@ -57,5 +55,11 @@
 .about .container,
 .advantages .container,
 .reviews .container {
+  position: relative;
+}
+
+.about .container--outer,
+.advantages .container--outer,
+.reviews .contaner--outer {
   position: relative;
 }

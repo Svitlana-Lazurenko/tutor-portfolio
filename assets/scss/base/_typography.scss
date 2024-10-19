@@ -73,6 +73,14 @@ strong {
   color: $color-accent;
   font-size: rem(64);
 
+  @include media(psw) {
+    font-size: rem(84);
+  }
+
+  @include media(ms) {
+    font-size: rem(104);
+  }
+
   @include media(md) {
     font-size: rem(96);
   }

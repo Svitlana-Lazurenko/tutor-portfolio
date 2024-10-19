@@ -25,18 +25,27 @@
     background-size: contain;
     display: inline-block;
     position: absolute;
-    top: -5%;
+    top: rem(-30);
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, rem(-30));
+    width: rem(300);
     aspect-ratio: 2.5 / 1;
     z-index: 1;
+
+    @include media(xs) {
+      top: rem(-45);
+      width: rem(350);
+    }
+
+    @include media(sm) {
+      top: rem(-70);
+      width: rem(500);
+    }
 
     @include media(md) {
       top: rem(-100);
       left: auto;
       transform: none;
-      width: rem(500);
     }
 
     @include media(def) {
@@ -50,20 +59,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
   }
 
   &__img-2 {
-    margin-top: 20%;
+    margin-top: rem(80);
     float: right;
     shape-outside: url("../images/plant-5.svg");
     shape-margin: rem(20);
     position: relative;
     z-index: 1;
     width: 45%;
-
-    @include media(psw) {
-      margin-top: 25%;
-    }
 
     @include media(md) {
       margin-top: rem(10);
@@ -77,12 +83,16 @@
   }
 
   &__text {
-    padding: 25% 0 rem(75);
+    padding: rem(75) 0 rem(75);
     position: relative;
     z-index: 1;
 
     @include media(psw) {
-      padding-top: 30%;
+      padding-top: rem(120);
+    }
+
+    @include media(psw-2) {
+      padding-top: rem(145);
     }
 
     @include media(md) {

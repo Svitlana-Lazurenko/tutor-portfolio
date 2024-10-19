@@ -47,6 +47,7 @@
 
     openModalBtn.setAttribute("aria-expanded", !isModalOpen);
     closeModalBtn.setAttribute("aria-expanded", !isModalOpen);
+    backdrop.setAttribute("aria-hidden", isModalOpen);
     backdrop.classList.toggle("is-hidden");
     document.body.classList.toggle("modal-open");
   }

@@ -32,6 +32,10 @@
     padding: 0;
   }
 
+  &--wide {
+    max-width: 1400px;
+  }
+
   &--flex {
     @include media(md) {
       display: flex;
@@ -61,8 +65,4 @@
 .about .container--outer,
 .reviews .contaner--outer {
   position: relative;
-}
-
-.reviews .container {
-  max-width: 1400px;
 }

@@ -2,6 +2,7 @@ body {
   font-family: $font-base;
   font-size: rem(20);
   color: $color-text-1;
+  text-align: justify;
 
   @include media(psw) {
     font-size: rem(34);
@@ -36,7 +37,19 @@ h3 {
   color: $color-accent;
   text-transform: uppercase;
 
+  @include media(ms) {
+    font-size: rem(80);
+  }
+
   @include media(md) {
+    font-size: rem(60);
+  }
+
+  @include media(def) {
+    font-size: rem(84);
+  }
+
+  @include media(container) {
     font-size: rem(96);
   }
 }
@@ -68,6 +81,10 @@ strong {
   }
 }
 
+.about__text {
+  text-align: left;
+}
+
 .advantages-list__item:before {
   font-family: $font-accent;
   color: $color-accent;
@@ -86,8 +103,36 @@ strong {
   }
 }
 
-.reviews__text {
+.reviews-list__text {
   color: $color-text-2;
+
+  @include media(psw) {
+    font-size: rem(24);
+  }
+
+  @include media(sm) {
+    font-size: rem(32);
+  }
+
+  @include media(ms) {
+    font-size: rem(42);
+  }
+
+  @include media(md) {
+    font-size: rem(24);
+  }
+
+  @include media(md-2) {
+    font-size: rem(28);
+  }
+
+  @include media(def) {
+    font-size: rem(32);
+  }
+
+  @include media(container) {
+    font-size: rem(36);
+  }
 }
 
 .header-menu a {

@@ -1,21 +1,27 @@
 .reviews {
   background-color: $color-primary-light;
-  padding: rem(100) 0;
+  padding: rem(60) 0 rem(146);
+
+  @include media(sm) {
+    padding-top: rem(120);
+  }
 
   &__img {
     position: absolute;
     right: 0;
-    top: -90px;
+    top: -190px;
     width: 80%;
     aspect-ratio: 0.9/ 1;
     background-image: url("../images/paper-diagonal.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 100px 0;
+    z-index: 1;
 
     @include media(md) {
       width: 750px;
-      top: -520px;
+      top: -420px;
+      z-index: 0;
     }
   }
 
@@ -25,31 +31,30 @@
     background-size: contain;
     display: inline-block;
     position: absolute;
-    top: rem(-30);
+    top: rem(-90);
     left: 50%;
     transform: translate(-50%, rem(-30));
     width: rem(300);
     aspect-ratio: 2.5 / 1;
-    z-index: 1;
+    z-index: 2;
 
     @include media(xs) {
-      top: rem(-45);
       width: rem(350);
     }
 
     @include media(sm) {
-      top: rem(-70);
+      top: rem(-180);
       width: rem(500);
     }
 
     @include media(md) {
-      top: rem(-100);
+      top: rem(-220);
       left: auto;
       transform: none;
     }
 
     @include media(def) {
-      width: rem(660);
+      width: rem(-240);
     }
   }
 
@@ -66,22 +71,27 @@
 .reviews-list {
   display: flex;
   flex-direction: column;
-  gap: rem(10);
+  position: relative;
+  z-index: 3;
 
   @include media(md) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 rem(80);
+    align-items: flex-start;
+    // gap: rem(10);
+    // padding: 0 rem(80);
   }
 
   &__item {
     background-repeat: no-repeat;
-    background-size: contain;
-    aspect-ratio: 1 / 0.7;
+    background-size: cover;
+    aspect-ratio: 1 / 0.8;
     position: relative;
+    width: 100%;
 
     @include media(md) {
-      flex-basis: calc((100% - rem(10)) / 2);
+      background-size: contain;
+      width: 50%;
     }
 
     &::before {
@@ -93,47 +103,129 @@
       display: block;
       position: absolute;
       z-index: 1;
-      // top: 100px;
-      // left: -100px;
     }
 
     &:nth-child(1) {
       background-image: url("../images/paper-medium-1.webp");
+
+      @include media(md) {
+        background-size: 100% 95%; // 11111111
+      }
+
+      @include media(xl-2) {
+        background-size: contain; // 11111111
+      }
+
       &::before {
-        background-image: url("../images/plant-5.svg");
+        background-image: url("../images/plant-1.svg"),
+          url("../images/plant-3.svg");
+
+        @include media(md) {
+          background-image: url("../images/plant-5.svg");
+        }
+      }
+
+      & > .reviews-list__item-review {
+        @include media(md) {
+          top: 30%;
+          transform: translate(-50%, -30%);
+        }
       }
     }
 
     &:nth-child(2) {
       background-image: url("../images/paper-medium-2.webp");
+      transform: translateY(15%);
+      position: relative;
+      z-index: 4;
+
+      @include media(md) {
+        transform: translate(-10%, 35%);
+        background-size: cover; // 1111111111
+      }
+
+      @include media(xl-2) {
+        background-size: contain; // 11111111
+      }
+
       &::before {
-        background-image: url("../images/plant-1.svg"),
-          url("../images/plant-3.svg");
+        background-image: url("../images/plant-5.svg");
+
+        @include media(md) {
+          background-image: url("../images/plant-1.svg"),
+            url("../images/plant-3.svg");
+        }
+      }
+
+      & > .reviews-list__item-review {
+        @include media(md) {
+          top: 10%;
+          transform: translate(-50%, -10%);
+        }
       }
     }
 
     &:nth-child(3) {
       background-image: url("../images/paper-medium-3.webp");
       background-position: center;
+      aspect-ratio: 1 / 1;
+      transform: translate(10%, -5%);
+
+      @include media(md) {
+        width: 40%;
+      }
+
       &::before {
         background-image: url("../images/plant-2.svg");
+        position: absolute;
+        top: 50%;
+
+        @include media(md) {
+        }
       }
     }
 
     &:nth-child(4) {
       background-image: url("../images/paper-medium-1.webp");
+      transform: translateY(-15%);
+      position: relative;
+      z-index: 4;
+
+      @include media(md) {
+        transform: translate(10%, 35%);
+      }
+
       &::before {
         background-image: url("../images/plant-3.svg"),
           url("../images/plant-4.svg");
+
+        @include media(md) {
+        }
+      }
+
+      & > .reviews-list__item-review {
+        @include media(md) {
+          top: 30%;
+          transform: translate(-50%, -30%);
+        }
       }
     }
 
     &:nth-child(5) {
       background-image: url("../images/paper-medium-4.webp");
-      aspect-ratio: 1 / 0.85;
       background-position: center;
+      aspect-ratio: 1 / 1;
+      transform: translateY(-10%);
+
+      @include media(md) {
+        transform: translate(10%, -3%);
+      }
+
       &::before {
         background-image: url("../images/plant-1.svg");
+
+        @include media(md) {
+        }
       }
     }
   }
@@ -143,24 +235,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    text-align: center;
+    width: 74%;
   }
 
   &__item-title {
-    // &::before {
-    //   content: "";
-    //   // background-image: url("../images/plant-2.svg");
-    //   width: rem(300);
-    //   height: rem(300);
-    //   background-size: contain;
-    //   background-repeat: no-repeat;
-    //   display: block;
-    //   position: absolute;
-    //   z-index: 1;
-    //   // top: 100px;
-    //   // left: -100px;
-    // }
   }
 
   &__item-name {

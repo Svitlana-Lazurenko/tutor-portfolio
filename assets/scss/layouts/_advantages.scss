@@ -122,9 +122,7 @@
   z-index: 1;
 
   @include media(md) {
-    -webkit-columns: 2;
     columns: auto 2;
-    -webkit-column-gap: rem(60);
     column-gap: rem(80);
   }
 

@@ -10,7 +10,10 @@ if (!defined('ABSPATH')) exit; ?>
             <div class="reviews__title-wrapper">
                 <h2 id="reviews" class="reviews__title">Відгуки</h2>
             </div>
+        </div>
 
+
+        <div class="container container--no-gap">
             <?php $reviews = get_field('reviews'); ?>
 
             <?php if (have_rows('reviews')) : ?>
@@ -40,6 +43,5 @@ if (!defined('ABSPATH')) exit; ?>
                 </ul>
             <?php endif; ?>
         </div>
-
     </div>
 </section>

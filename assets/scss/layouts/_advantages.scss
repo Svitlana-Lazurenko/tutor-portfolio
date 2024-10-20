@@ -1,41 +1,18 @@
 .advantages {
   background-image: url("../images/paper-big.webp");
-  padding: rem(200) 0 rem(100);
+  padding: rem(100) 0 rem(100);
   position: relative;
   z-index: 1;
+
+  @include media(sm) {
+    padding-top: rem(200);
+  }
 
   @include media(md) {
     padding-bottom: rem(120);
   }
 
-  &__img-1 {
-    background-image: url("../images/plant-3.svg"), url("../images/plant-4.svg");
-    background-repeat: no-repeat;
-    background-size: 30% 30%, 80% 80%;
-    background-position: 0 100%, 100% 100%;
-    width: rem(80);
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    top: rem(-200);
-    right: 0;
-    z-index: 2;
-
-    @include media(md) {
-      // width: rem(220);
-      // height: rem(220);
-      // bottom: 20%;
-      // right: -10%;
-    }
-
-    @include media(lg) {
-      width: rem(220);
-      height: rem(220);
-      top: rem(-250);
-      right: 10%;
-    }
-  }
-
-  &__img-2 {
+  &__img {
     background-image: url("../images/plant-2.svg");
     width: 27%;
     aspect-ratio: 1 / 1;
@@ -43,16 +20,19 @@
     background-repeat: no-repeat;
     display: block;
     position: absolute;
-    bottom: rem(-50);
+    bottom: rem(-70);
+    left: -3%;
 
     @include media(md) {
+      left: 0;
+      bottom: rem(-50);
       width: rem(120);
     }
 
     @include media(note) {
       top: 50%;
       bottom: auto;
-      left: 5%;
+      left: -13%;
       width: rem(200);
     }
   }
@@ -63,7 +43,7 @@
     background-size: contain;
     display: inline-block;
     position: absolute;
-    top: rem(-215);
+    top: rem(-125);
     left: 50%;
     transform: translate(-50%, rem(-30));
     width: rem(350);
@@ -71,7 +51,6 @@
     z-index: 1;
 
     @include media(xs) {
-      top: rem(-220);
       width: rem(400);
     }
 
@@ -93,31 +72,37 @@
       width: rem(826);
     }
 
-    // @include media(container) {
-    //   right: 175px;
-    // }
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../images/plant-3.svg"),
+        url("../images/plant-4.svg");
+      background-repeat: no-repeat;
+      background-size: 25% 25%, 80% 80%;
+      background-position: 20% 100%, 190% 100%;
+      width: rem(90);
+      aspect-ratio: 1 / 1;
+      position: absolute;
+      bottom: 15%;
+      right: 0;
+      z-index: 2;
 
-    // &::after {
-    //   content: "";
-    //   background-image: url("../images/plant-3.svg"),
-    //     url("../images/plant-4.svg");
-    //   background-repeat: no-repeat;
-    //   background-size: 30% 30%, 80% 80%;
-    //   background-position: 0 100%, 100% 100%;
-    //   width: rem(80);
-    //   height: rem(80);
-    //   display: block;
-    //   position: absolute;
-    //   bottom: 20%;
-    //   right: 0;
+      @include media(xs) {
+        width: rem(100);
+      }
 
-    //   @include media(md) {
-    //     width: rem(220);
-    //     height: rem(220);
-    //     bottom: 20%;
-    //     right: -10%;
-    //   }
-    // }
+      @include media(sm) {
+        width: rem(160);
+      }
+
+      @include media(def) {
+        width: rem(200);
+      }
+
+      @include media(lg) {
+        right: -5%;
+      }
+    }
   }
 
   &__title {
@@ -133,6 +118,8 @@
 .advantages-list {
   counter-reset: list-counter; /* Initialize the counter */
   padding: 0 rem(15);
+  position: relative;
+  z-index: 1;
 
   @include media(md) {
     -webkit-columns: 2;
@@ -161,8 +148,5 @@
     &:nth-child(n + 10):before {
       content: counter(list-counter); /* No extra null */
     }
-  }
-
-  &__text {
   }
 }

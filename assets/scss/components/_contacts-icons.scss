@@ -6,14 +6,40 @@
       gap: rem(30);
     }
   }
+
+  .menu-container & {
+    display: flex;
+    gap: rem(20);
+    margin: rem(65) 0 0 rem(15);
+
+    @include media(psw) {
+      gap: rem(25);
+      margin-left: rem(20);
+    }
+
+    @include media(ms) {
+      gap: rem(30);
+      margin-left: rem(25);
+    }
+  }
 }
 .link {
+  width: rem(40);
+  aspect-ratio: 1 / 1;
+
+  @include media(psw) {
+    width: rem(50);
+  }
+
+  @include media(ms) {
+    width: rem(65);
+  }
 }
 .link--phone {
 }
-.link__icon {
-  width: rem(50);
-  height: rem(50);
-}
 .link--instagram {
+}
+.link__icon {
+  width: 100%;
+  height: 100%;
 }

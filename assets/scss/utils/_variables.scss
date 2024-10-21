@@ -14,8 +14,8 @@ $breakpoints: (
   // hg: 1150px,
   container: 1170px,
   lg: 1280px,
+  lg-2: 1330px,
   // xl: 1366px,
-  xl-2: 1330px,
   container-wide: 1400px,
   // mg: 1440px,
   note: 1536px,
@@ -31,7 +31,9 @@ $font-base: "Gooseberry", sans-serif;
 $color-primary: #fae9c8;
 $color-primary-light: #fff8ea;
 $color-secondary: #2f1a0d;
+$color-secondary-transparent: #301b0dae;
 $color-accent: #ef6e1c;
 $color-text-1: #2f2f2f;
+$color-text-1-transparent: #2e2e2e5e;
 $color-text-2: #000000;
 $color-text-light: #ffffff;

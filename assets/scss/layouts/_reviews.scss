@@ -108,7 +108,7 @@
         @include media(md) {
           background-size: 100% 95%; // 11111111
         }
-        @include media(xl-2) {
+        @include media(lg-2) {
           background-size: contain; // 11111111
         }
 
@@ -171,7 +171,7 @@
         @include media(md) {
           background-size: cover; // 1111111111
         }
-        @include media(xl-2) {
+        @include media(lg-2) {
           background-size: contain; // 11111111
         }
 
@@ -236,7 +236,7 @@
       @include media(md) {
         transform: translate(10%, 45%);
       }
-      @include media(xl-2) {
+      @include media(lg-2) {
         transform: translate(10%, 30%); // 11111111
       }
 

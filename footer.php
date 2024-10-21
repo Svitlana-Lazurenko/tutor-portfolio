@@ -48,8 +48,8 @@ if (!defined('ABSPATH')) exit; ?>
     <div class="modal">
         <form name="enrollment_form" class="form" autocomplete="on">
             <p class="form__description">Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення Якесь речення</p>
-            <input class="form__input" autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
-            <input class="form__input" autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
+            <input class="form__input form__input--name" autocomplete="name" type="text" name="name" placeholder="Ім'я" arial-label="Поле для вводу імені" />
+            <input class="form__input form__input--phone" autocomplete="tel" type="tel" name="phone" placeholder="Номер телефону" arial-label="Поле для вводу номера телефону" />
             <button type="submit" class="btn-main btn-main--modal js-close-modal" aria-controls="modal" aria-expanded="false" aria-label="Відправити форму запису на курс та закрити модальне вікно.">
                 Записатись
             </button>

@@ -1,25 +1,38 @@
 .btn {
   border: none;
+  width: rem(25);
+  aspect-ratio: 1 / 1;
+
+  @include media(psw) {
+    width: rem(35);
+  }
+
+  @include media(ms) {
+    width: rem(45);
+  }
 
   &--open {
     background-color: transparent;
     @include media(md) {
       display: none;
     }
+
     &__icon {
-      width: rem(30);
-      height: rem(30);
+      width: 100%;
+      height: 100%;
     }
   }
 
   &--close {
     background-color: transparent;
+    margin-left: 45%;
     @include media(md) {
       display: none;
     }
+
     &__icon {
-      width: rem(30);
-      height: rem(30);
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -29,8 +42,6 @@
   background-color: $color-accent;
   border-radius: 10px;
   transition: filter 0.5s linear;
-  margin: 0 auto;
-  padding: rem(10) 0;
 
   &:hover,
   &:focus {
@@ -38,12 +49,18 @@
   }
 
   &--hero {
+    padding: rem(10) 0;
     position: absolute;
     bottom: rem(100);
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: rem(490);
+    margin: 0 auto;
+
+    @include media(sm) {
+      bottom: rem(140);
+    }
 
     @include media(md) {
       position: static;
@@ -54,5 +71,23 @@
   }
 
   &--modal {
+    display: block;
+    width: 100%;
+    height: rem(47);
+    padding: rem(10) 0;
+
+    @include media(psw) {
+      height: rem(75);
+      padding: rem(20) 0;
+    }
+
+    @include media(ms) {
+      height: rem(100);
+    }
+
+    @include media(md) {
+      height: rem(75);
+      padding: rem(10) 0;
+    }
   }
 }

@@ -15,10 +15,10 @@ body {
 }
 
 main {
-  margin-top: rem(70);
+  margin-top: rem(110);
 
   @include media(md) {
-    margin-top: rem(100);
+    margin-top: rem(140);
   }
 }
 
@@ -55,5 +55,6 @@ a {
 }
 
 button {
+  padding: 0;
   cursor: pointer;
 }

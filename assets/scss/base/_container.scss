@@ -1,6 +1,4 @@
 .container {
-  // width: 100%;
-  // max-width: 1640px;
   max-width: 1170px;
   margin: 0 auto;
   padding-left: 10px;
@@ -16,7 +14,6 @@
     padding-right: 20px;
   }
 
-  // & &,
   &--no-gap {
     padding: 0;
   }

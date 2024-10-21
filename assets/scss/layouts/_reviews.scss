@@ -1,7 +1,6 @@
 .reviews {
   background-color: $color-primary-light;
   padding: rem(100) 0 rem(146);
-
   border-top: rem(175) solid transparent;
   margin-top: rem(-175);
   background-clip: padding-box;
@@ -110,10 +109,10 @@
       & > .reviews-list__item-inner {
         background-image: url("../images/paper-medium-1.webp");
         @include media(md) {
-          background-size: 100% 95%; // 11111111
+          background-size: 100% 95%;
         }
         @include media(lg-2) {
-          background-size: contain; // 11111111
+          background-size: contain;
         }
 
         &::before {
@@ -173,10 +172,10 @@
       & > .reviews-list__item-inner {
         background-image: url("../images/paper-medium-2.webp");
         @include media(md) {
-          background-size: cover; // 1111111111
+          background-size: cover;
         }
         @include media(lg-2) {
-          background-size: contain; // 11111111
+          background-size: contain;
         }
 
         &::before {
@@ -221,7 +220,6 @@
           left: -10%;
           width: 30%;
           background-size: 100% 100%;
-
           @include media(md) {
             top: auto;
             left: auto;
@@ -319,17 +317,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 74%;
-  }
-
-  &__item-title {
-  }
-
-  &__item-name {
-  }
-
-  &__item-score {
-  }
-
-  &__item-text {
   }
 }

@@ -1,0 +1,539 @@
+
+
+[
+    {
+        "key": "group_670e71ca2926c",
+        "title": "Головна Інформація",
+        "fields": [
+            {
+                "key": "field_670e71caff9f7",
+                "label": "Привітальний текст",
+                "name": "welcome_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Напишіть коротку інформацію про себе.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_670e7303ff9f8",
+                "label": "Ваше фото",
+                "name": "photo",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Завантажте ваше фото. Формат зображення повинен бути 1:1.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "home-page.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Main info about user",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_670e6d0a97a2c",
+        "title": "Головні Налаштування Теми",
+        "fields": [
+            {
+                "key": "field_670e6d0a5c5ee",
+                "label": "Логотип",
+                "name": "logo",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Ваш логотип.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_670e6df45c5ef",
+                "label": "Телефон",
+                "name": "phone",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Ваш телефон.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_670e6e665c5f0",
+                "label": "Instagram",
+                "name": "instagram",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "Ваша сторінка у Instagram.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "theme-general-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Theme general settings",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_670e77a1c218b",
+        "title": "Про Курс",
+        "fields": [
+            {
+                "key": "field_670e77a1801c0",
+                "label": "Опис курсу",
+                "name": "about_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Короткий опис курсу.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_670e7904801c1",
+                "label": "Інформація про курс",
+                "name": "about_info",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_670e79b1801c2",
+                        "label": "Вміст курсу",
+                        "name": "number",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"70 уроків\"",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_670e7a76801c3",
+                        "label": "Тривалість курсу",
+                        "name": "duration",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"9 місяців\"",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_670e7c04801c4",
+                        "label": "Як часто займатися ?",
+                        "name": "frequency",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"2 рази на тиждень по 1 годині\"",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_670e7c8f801c5",
+                        "label": "Який вигляд мають заняття ?",
+                        "name": "format",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"проведення лекцій в групах до 10 осіб\"",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_670e7d37801c6",
+                        "label": "Коли проходять заняття ?",
+                        "name": "time",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"за визначеним графіком\"",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_670e7df3801c7",
+                        "label": "Вартість",
+                        "name": "price",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "E.g., \"550 грн\/місяць\"",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "home-page.php"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Information about course",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_670e7fc5d169d",
+        "title": "Переваги Курсу",
+        "fields": [
+            {
+                "key": "field_670e7fc5d835d",
+                "label": "Переваги курсу",
+                "name": "advantages",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "row",
+                "pagination": 0,
+                "min": 1,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Додати перевагу",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_670e830dd835e",
+                        "label": "Перевага",
+                        "name": "advantage",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Напишіть опис переваги, виділивши жирним текстом важливі частини.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "basic",
+                        "media_upload": 0,
+                        "delay": 0,
+                        "parent_repeater": "field_670e7fc5d835d"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "home-page.php"
+                }
+            ]
+        ],
+        "menu_order": 2,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Advantages of the course",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_670e85904c5c4",
+        "title": "Відгуки Про Курс",
+        "fields": [
+            {
+                "key": "field_670e8590992ab",
+                "label": "Відгуки",
+                "name": "reviews",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Відгуки учасників курсу.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "row",
+                "pagination": 0,
+                "min": 1,
+                "max": 5,
+                "collapsed": "",
+                "button_label": "Додати відгук",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_670e85bb992ac",
+                        "label": "Відгук",
+                        "name": "review",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_670e85c8992ad",
+                                "label": "Ім'я автора відгуку",
+                                "name": "review_name",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_670e85d0992ae",
+                                "label": "Бал ЗНО",
+                                "name": "review_score",
+                                "aria-label": "",
+                                "type": "number",
+                                "instructions": "Бал ЗНО, отриманий автором відгуку.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "min": "",
+                                "max": "",
+                                "placeholder": "",
+                                "step": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_670e87ea992af",
+                                "label": "Текст відгуку",
+                                "name": "review_text",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "Напишіть відгук, виділивши жирним текстом важливі частини.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "basic",
+                                "media_upload": 0,
+                                "delay": 0
+                            }
+                        ],
+                        "parent_repeater": "field_670e8590992ab"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "home-page.php"
+                }
+            ]
+        ],
+        "menu_order": 3,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Reviews about the course",
+        "show_in_rest": 0
+    }
+]

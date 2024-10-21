@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit; ?>
 
     <div class="container">
         <div class="advantages__title-wrapper">
-            <h2 id="advantages" class="advantages__title">Переваги курсу</h2>
+            <h2 class="advantages__title">Переваги курсу</h2>
         </div>
 
         <div class="advantages__img" aria-hidden="true">

@@ -4,6 +4,10 @@
   position: relative;
   z-index: 1;
 
+  border-top: rem(175) solid transparent;
+  margin-top: rem(-175);
+  background-clip: padding-box;
+
   @include media(sm) {
     padding-top: rem(200);
   }

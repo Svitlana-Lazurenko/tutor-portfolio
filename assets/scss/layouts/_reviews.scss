@@ -2,6 +2,10 @@
   background-color: $color-primary-light;
   padding: rem(100) 0 rem(146);
 
+  border-top: rem(175) solid transparent;
+  margin-top: rem(-175);
+  background-clip: padding-box;
+
   @include media(sm) {
     padding-top: rem(120);
   }
@@ -129,7 +133,7 @@
             right: -46%;
           }
 
-          @include media(container) {
+          @include media(container-outer) {
             top: -20%;
             left: -43%;
           }

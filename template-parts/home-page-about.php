@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) exit; ?>
             ?>
 
             <div class="about__title-wrapper">
-                <h2 id="about" class="about__title">Про курс</h2>
+                <h2 class="about__title">Про курс</h2>
             </div>
             <img class="about__img-2" src="<?php echo get_template_directory_uri() . '/assets/images/plant-5.svg'; ?>" alt="" aria-hidden="true" />
             <?php if ($aboutText <> '') : ?>

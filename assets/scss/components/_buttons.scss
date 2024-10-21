@@ -25,7 +25,16 @@
 
   &--close {
     background-color: transparent;
-    margin-left: 45%;
+    margin-left: calc(50% - 50px);
+
+    @include media(psw) {
+      margin-left: calc(50% - 60px);
+    }
+
+    @include media(ms) {
+      margin-left: calc(50% - 70px);
+    }
+
     @include media(md) {
       display: none;
     }

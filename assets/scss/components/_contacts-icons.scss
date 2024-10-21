@@ -34,6 +34,16 @@
   @include media(ms) {
     width: rem(65);
   }
+
+  .header & {
+    @include media(md) {
+      width: rem(45);
+    }
+
+    @include media(def) {
+      width: rem(65);
+    }
+  }
 }
 .link--phone {
 }

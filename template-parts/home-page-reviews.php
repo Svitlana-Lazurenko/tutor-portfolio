@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) exit; ?>
 
         <div class="container">
             <div class="reviews__title-wrapper">
-                <h2 id="reviews" class="reviews__title">Відгуки</h2>
+                <h2 class="reviews__title">Відгуки</h2>
             </div>
         </div>
 

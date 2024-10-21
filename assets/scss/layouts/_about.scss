@@ -2,6 +2,9 @@
   background-color: $color-primary-light;
   padding-bottom: rem(100);
 
+  border-top: rem(175) solid transparent;
+  margin-top: rem(-175);
+
   &__img-1 {
     position: absolute;
     right: 0;

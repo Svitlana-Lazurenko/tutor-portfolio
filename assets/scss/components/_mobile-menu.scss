@@ -6,13 +6,13 @@
   width: 100vw;
   height: 100vh;
   z-index: 199;
-  background-color: $color-primary;
+  background-color: $color-primary-light;
   padding: rem(45) rem(20);
   transition: transform 400ms ease-in;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &.is-open {
-    transform: translateX(35%);
+    transform: translateX(50vw);
   }
 }
 

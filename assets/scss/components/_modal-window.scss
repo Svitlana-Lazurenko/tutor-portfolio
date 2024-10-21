@@ -26,7 +26,7 @@
 }
 
 .modal {
-  overflow-y: scroll;
+  overflow-y: auto;
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform;
   transition-duration: 400ms;
@@ -49,7 +49,7 @@
 
   @include media(md) {
     width: rem(520);
-    height: rem(460);
+    height: rem(450);
     padding: rem(45);
   }
 }

@@ -11,25 +11,35 @@ WordPress theme for advertising training courses.
   <figcaption>Section "Hero"</figcaption>
 </figure style="margin-bottom: 10px;">
 
+&nbsp;
+
 <figure>
   <img src="screenshots/about.png" alt="Section About. Screenshot">
   <figcaption>Section "About"</figcaption>
 </figure>
+
+&nbsp;
 
 <figure>
   <img src="screenshots/advantages.png" alt="Section Advantages. Screenshot">
   <figcaption>Section "Advantages"</figcaption>
 </figure>
 
+&nbsp;
+
 <figure>
   <img src="screenshots/reviews.png" alt="Section Reviews. Screenshot">
   <figcaption>Section "Reviews"</figcaption>
 </figure>
 
+&nbsp;
+
 <figure>
   <img src="screenshots/modal.png" alt="Modal window. Screenshot">
   <figcaption>Modal window</figcaption>
 </figure>
+
+&nbsp;
 
 <figure>
   <img src="screenshots/mobile-menu.png" alt="Mobile menu. Screenshot">

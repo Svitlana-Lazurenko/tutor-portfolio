@@ -46,9 +46,16 @@ WordPress theme for advertising training courses.
   <figcaption style="text-align: center">Mobile menu</figcaption>
 </figure>
 
-## Note
+## Installation and usage:
 
-Settings for ACF PRO are in plugins-settings/acf-pro.json
+- Download the theme in zip format.
+- In the administrative part of website, go to "Appearance" -> "Themes" -> "Add new theme" -> "Upload theme". Choose the archive and upload it. Activate theme.
+- Install and activate the ACF PRO plugin. This can be done through "Admin Menu" -> "Plugins" -> "Add New Plugin". You can also download the plugin from the official website of this plugin.
+- Go to "Admin Menu" -> "ACF" -> "Tools" -> "Import", select the "acf-pro.json" file from the "plugins-settings" folder and install settings of ACF PRO by clicking the "Import JSON" button. Note: The "plugins-settings" folder is located directly in the theme folder.
+- Create a page, choosing the "Home Page" template. After creating a page using the template "Home Page" make it the homepage. To do this, in "Settings" -> "Reading" -> "Your homepage displays" choose "A static page". In "Homepage" choose a page that was created using the "Home Page" template.
+- Create menus in "Appearance" -> "Menus" ("Header Menu" and "Mobile Menu"). Both menus should have the following items: "Про курс" (Custom Link "#top"), "Переваги" (Custom Link "#about"), "Шлях до знань" (Custom Link "#path"), "Відгуки" (Custom Link "#reviews").
+
+Done!
 
 ## Commands:
 

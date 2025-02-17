@@ -1,6 +1,6 @@
-# Tutoring Course
+# Tutor Portfolio
 
-WordPress theme for advertising training courses.
+Part of WordPress theme for tutor portfolio.
 
 - The first 4 sections, a mobile menu and a modal window have been developed.
 - The ACF PRO plugin has been used.
